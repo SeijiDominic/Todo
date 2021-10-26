@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+    <header>
+        <div id="hdr-left">
+            <h2>TodoApp</h2>
+        </div>
+        <div id="hdr-right">
+            <div>
+                <a class="clickable" th:href="@{/todo/create}" th:method="GET">Create</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="todo_items" class="flex-row">
+        <div id='container' class="flex-column" th:each="item : ${listItems}">
+            <div id='head' class='flex-row'>
+                <span id='title' class='flex-row' th:text="${item.title}"></span>
+<!--                <span id='done-cont' class='flex-row'><input type='checkbox' id='done' class='flex-row' th:value="${item.getDone()}"></span>-->
+            </div>
+
+            <div id='content' th:text="${item.getContent()}"></div>
+            <div id='foot' class="flex-row">
+                <span id='dateCreated' th:text="${item.getDateCreated()}"></span>
+                <div style="display: flex; justify-content: flex-end">
+                    <a class="clickable-dark" th:href="@{/todo/update/} + ${item.id}">Update</a>
+                    <a class="clickable-dark" th:href="@{/todo/delete/} + ${item.id}">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+

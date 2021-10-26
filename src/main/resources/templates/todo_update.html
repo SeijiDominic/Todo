@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+</head>
+<body>
+    <header>
+        <div id="hdr-left">
+            <h2>TodoApp</h2>
+        </div>
+        <div id="hdr-right">
+            <div>
+                <a class="clickable" th:href="@{/todo}" th:method="GET">List</a>
+                <a class="clickable" th:href="@{/todo/create}" th:method="GET">Create</a>
+            </div>
+        </div>
+    </header>
+
+    <form th:action="@{/todo/update}" th:method="POST" th:object="${listItem}">
+        <span style="visibility: hidden"><label for="id">ID: </label> <input type="text" id="id" th:field="*{id}"></span><br>
+        <label for="title">Title: </label> <input type="text" id="title" th:field="*{title}"><br>
+        <label for="done"></label> <input type="checkbox" id="done" th:field="*{done}"><br>
+        <label for="content"></label> <input type="text" id="content" th:field="*{content}"><br>
+        <label for="date_due"></label> <input type="date" id="date_due" th:field="*{dateDue}"><br>
+        <input type="submit" value="Update" onmouseenter="console.log(document.getElementById('title').value)">
+    </form>
+</body>
+</html>

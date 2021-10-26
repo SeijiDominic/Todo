@@ -1,0 +1,156 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background: #141c29;
+    padding: 0px;
+    margin:0px;
+
+    transition-duration: 1s;
+}
+
+header {
+    background: #1f51a1;
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px 10px;
+    color: mintcream;
+
+}
+
+#hdr-left {
+    display: flex;
+    flex-grow: 1;
+}
+
+#hdr-right {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.clickable {
+    background: mintcream;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.clickable-dark {
+    background: #1f51a1;
+    color: mintcream;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.9em;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+#todo_items {
+    padding: 10px 50px;
+    justify-content: center;
+}
+
+#todo_items #container > * {
+    padding: 5px 15px;
+}
+
+#todo_items #container {
+    margin: 5px;
+    background: mintcream;
+    border-radius: 5px;
+    width: 325px;
+    flex-wrap: nowrap;
+}
+
+#todo_items #head {
+    background: #1f51a1;
+    color: mintcream;
+    padding-right: 0px;
+    min-height: 52px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+#todo_items #head #title {
+    display: flex;
+    white-space: pre-wrap;
+    word-break: break-word;
+    flex-grow: 6;
+    margin: 8px 0px;
+    font-size: 1.4em;
+    max-width: 274px;
+    height: auto;
+    font-weight: bolder;
+    overflow:auto;
+}
+
+#todo_items #head #title:first-letter {
+    text-transform: capitalize;
+
+}
+
+#todo_items #head #done-cont {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 8px 0px;
+    font-size: 1.4em;
+}
+
+
+#todo_items #content {
+    min-height: 100px;
+    font-size: 1.2em;
+    word-break: break-word;
+    overflow:auto;
+}
+
+#todo_items #content:first-letter {
+    text-transform: capitalize;
+
+}
+
+#todo_items #foot {
+    font-size: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

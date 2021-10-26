@@ -1,0 +1,10 @@
+CREATE TABLE todo (
+    id BIGINT PRIMARY KEY AUTO_INCREMENT,
+    done BOOLEAN DEFAULT FALSE,
+    title VARCHAR(30) DEFAULT(''),
+    content VARCHAR(300) DEFAULT(''),
+    date_due DATE NULL,
+    date_created DATE DEFAULT (CURRENT_TIMESTAMP)
+);
+
+-- CREATE TABLE sequence();
